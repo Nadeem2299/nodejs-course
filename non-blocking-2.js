@@ -9,6 +9,6 @@ fs.readFile("sample.txt", (err, data) => { // error first callback
   } else {
     console.log(err);
   }
-});
+}); 
 
 console.log('1. program ended')
