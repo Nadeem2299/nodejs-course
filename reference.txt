@@ -108,5 +108,9 @@ Node.js architecture ---
     Operating System
 
 FIRST NODEJS PROGRAM
-this === global
+this === global 
 
+executing 1st code through terminal use:
+ node first.js
+
+file1.js => (NodeJS) => Machine Language
