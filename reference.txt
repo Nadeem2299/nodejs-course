@@ -1,0 +1,112 @@
+Node JS Training [30 hrs]
+
+10+ expamples
+1 SSR Project in NodeJS
+1 REST API Project in NodeJS
+
+---
+
+Softwares required
+--
+NodeJS V 14+
+VS Code Editor
+Chrome / FF / Edge / Safari Browser
+Postman REST API Client / Advanced REST API Client
+MongoDB Community Editor
+MySQL Community Server
+
+Day 1:
+
+NodeJS History---
+
+---
+
+file1.java => (javac) => bytecode / classfile => (JRE) => Native Machine Language 
+
+Front End --- JS
+
+Browser Family -- 
+2003, 04, 05  -- IE, Mozilla Firefox, Apple Safari, Opera
+
+Browser core = HTML Renderer + CSS Parser + JS engine
+
+Webkit Browser core (Open Sourced) => Safari
+Mozilla Browser core (Open Sourced) => Firefox
+
+Chromium Core (Open Sourced) => Chrome
+    Made with Webkit core + Mozilla + google own codebase (V8 JS Engine) => Chrome
+
+V8 JS Engine (Open Sourced) ---
+    * js code into machine lang before execute
+
+---
+
+NodeJS
+--
+    * Uses V8 Engine
+
+Front End --- JS (raw or vanila JS)
+ 
+JS flavours ---
+
+Back End -- Java, .Net, PHP, Perl, Python, Ruby, NodeJS (JS)
+
+Database
+--
+    SQL, MongoDB (JS)
+
+Mobile Apps
+--
+    Java, .Net, Python, Ionic and React Native (JS)
+
+Desktop Apps
+--
+    Java, .Net, Electron JS (JS)
+
+
+Day 2-
+NodeJS = V8 + ( C and C++ code + JS code )
+--
+
+    JS IN COMPUTER
+    JS as backend language
+
+challenges for JS as backend language ---
+ * JS needs to accept request and send responses
+    client => (ajax) => Server
+ * JS nneds to communicate over internet-                                                
+ * JS should deal with files and file system
+ * JS should deal with databases
+ * Synchronous ---
+    - JS is synchronous
+    - Executes only one process at a time
+    - V8 is also synchronous
+ex:
+    // sync js
+
+    function add (a, b) {
+        console.log('inside add')
+        setTimeout (() => {
+        return a+ b;
+        },2000)       
+    }
+
+    console.log('before calling add')
+    const output = add(10, 20);
+    console.log('after calling add')
+    console.log(output);
+
+* Asynchronous
+    - Executing more than one process simultaneously
+    - Node.js is asynchronous
+
+Node.js architecture ---
+    Node JS standarard library (written in JS)
+    Node JS bindings (written in C and C++)
+        V8
+        libuv(Async I/O, Events) (written in C and C++)
+    Operating System
+
+FIRST NODEJS PROGRAM
+this === global
+
