@@ -114,3 +114,13 @@ executing 1st code through terminal use:
  node first.js
 
 file1.js => (NodeJS) => Machine Language
+
+
+HTTP request    
+
+language.file   (server)
+default.aspx    (IIS)=> MS
+index.php       (Apache)=> OpenSourse
+index.jsp       (Weblogic, Tomcat, KBoss, Websphere)
+
+index.js        (Http in NodeJs)
