@@ -5,6 +5,7 @@ const dummyText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
 const buffer = new Buffer.from(dummyText, 'utf8'); // getting buffer out of a string
 
 console.log(buffer) // prints the content in buffer content
+console.log(Buffer.byteLength(buffer));
 console.log(buffer.toString()); // prints the content in string content
 console.log(buffer.toJSON()); // prints the content in Json content
 
