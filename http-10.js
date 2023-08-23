@@ -10,16 +10,53 @@ http
     // let's process the response
     switch (req.url) {
       case "/":
-        res.end("<h1>welcome to my homepage</h1>"); // we can have only 1 response
+        res.end(`<html>
+        <head>
+        <title>Homepage</title>
+        </head>
+        <body>
+        <h1>welcome to homepage</h1>
+        <body>
+        </html>`); // we can have only 1 response
         break;
       case "/about":
-        res.end("<h1>welcome to my about page</h1>"); // we can have only 1 response
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.write(`<html>
+        <head>
+        <title>About page</title>
+        </head>
+        <body>
+        <h1>welcome to About page</h1>
+        <body>
+        </html>`);
+        res.end(); // we can have only 1 response
         break;
       case "/contact":
-        res.end("<h1>welcome to my contact page</h1>"); // we can have only 1 response
+        res.end(`<html>
+        <head>
+        <title>Contact page</title>
+        </head>
+        <body>
+        <h1>welcome to Contact page</h1>
+        <body>
+        </html>`); // we can have only 1 response
+        break;
+      case "/test":
+        // importing file system module
+        const fs = require('fs'); 
+        const test = fs.readFileSync('index.html');
+        res.end(test); // we can have only 1 response
         break;
       default:
-        res.end("<h1>404 page Not found</h1>");
+        res.write(`<html>
+        <head>
+        <title>404 Page</title>
+        </head>
+        <body>
+        <h1>Page not Found</h1>
+        <body>
+        </html>`);
+        res.end();
         break;
     }
   })

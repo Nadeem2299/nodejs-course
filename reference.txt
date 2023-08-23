@@ -124,3 +124,22 @@ index.php       (Apache)=> OpenSourse
 index.jsp       (Weblogic, Tomcat, KBoss, Websphere)
 
 index.js        (Http in NodeJs)
+
+day 5 
+-- ES Lint
+-- Sonar Qube
+
+
+
+10 Projects
+
+1 Project - SSR
+1 Project - REST API
+
+
+Nodejs ecosystem---
+
+fs 
+http 
+events 
+
