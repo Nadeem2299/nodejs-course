@@ -143,3 +143,15 @@ fs
 http 
 events 
 
+
+global dependecy--
+* will be accessible system wide
+npm i nodemon -g (or)
+npm i nodemon --global
+
+
+
+steps to install express js
+mkdir ssr-express-app 
+cd ssr-express-app 
+npm init

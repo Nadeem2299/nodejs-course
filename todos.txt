@@ -1,2 +1,4 @@
 1. try using res.write 
 2. try sending html files itself
+3. learn npm prune command
+4. learn about where will be the global packages is installed
