@@ -152,6 +152,55 @@ npm i nodemon --global
 
 
 steps to install express js
+npm i express
 mkdir ssr-express-app 
 cd ssr-express-app 
 npm init
+
+
+day 6:
+
+creating an express app-- 
+express --view=pug employee-management-rest-api
+
+start: node ./bin/www
+or 
+npm run start
+
+CRUD--
+Create
+Read
+Update
+Delete
+
+employee management:
+Create -- create employee
+Read  -- listing employee, Emplyee details by ID
+Update -- Update employee
+Delete -- Delete employee [TODO:]
+Search (will not be covered)
+Auth (Login, signup)
+
+DB: MongoDB, MySQL (sequalize)
+
+DESIGN PATTERN: mvc
+
+contact management
+
+blog
+
+employee-management-rest-api file walkthru-
+Template (View)
+
+---
+template engines-
+ejs
+backbone js
+mustache js
+handlebars js
+
+pug
+jade
+---
+
+angularjs, emberjs, Reactjs, template literals in js
