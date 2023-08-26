@@ -8,6 +8,9 @@ var logger = require('morgan');
 // custom imports
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var aboutRouter = require('./routes/about');
+// importing rest api related information
+var employeesRouter = require('./routes/api/employees');
 
 // variables
 var app = express();
@@ -22,8 +25,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', indexRouter); //localhost:3000/
+app.use('/users', usersRouter); // localhost:3000/users
+app.use('/about', aboutRouter); // localhost:3000/about
+
+// REST API - Endpoints
+app.use('/api/employees', employeesRouter)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
