@@ -108,11 +108,12 @@ TODO: Add multiple values
 
 
 Drivers of MongoDB
-    1. Official MongoDB Driver (NPMJS)
-    2. Unoffocial MongoDB Driver (Mongoose)
+  1. Official MongoDB Driver (https://www.npmjs.com/package/mongodb)
+  2. Unofficial MongoDB Driver -Mongoose (https://www.npmjs.com/package/mongoose)
 
 
-Mongoose ORM Tool
+Mongoose - Object Modeling package
 ====
     * Offers Object modelling (Schema)
+    * Object Document Mapping (DOM)
     * Driver
