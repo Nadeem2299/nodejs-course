@@ -1,4 +1,6 @@
 var express = require("express");
+const { createEmployee, getEmployees, getEmployeeById, updateEmployee } = require('../../controllers/employees.controller')
+
 var router = express.Router();
 
 // CRUD App
@@ -10,6 +12,7 @@ var router = express.Router();
 // 5. Delete employee [TODO:]
 
 /* POST method employee create. /api/employees*/
+/*
 router.post('/', function (req, res, next) {
   console.log(req);
   res.status(201).json({
@@ -17,8 +20,11 @@ router.post('/', function (req, res, next) {
     ...req.body
   });
 })
+*/
+router.post('/', createEmployee)
 
 /* GET employees listing. /api/employees*/
+/*
 router.get("/", function (req, res, next) {
   const employees = [
     {
@@ -36,9 +42,12 @@ router.get("/", function (req, res, next) {
   ];
   res.json(employees);
 });
+*/
+router.get("/", getEmployees)
 
 /* GET employee details. /api/employees/*id */
 // using url param
+/*
 router.get('/:empId', (req, res, next) => {
   console.log(req.url);
   console.log(req.params);
@@ -50,7 +59,23 @@ router.get('/:empId', (req, res, next) => {
     email: 'j@k.com'
   });
 })
+*/
+router.get('/:empId', getEmployeeById)
 
+// Update employee -PUT/PATCH
+/*
+router.put('/:id', (req, res, next) => {
+  console.log(req.url);
+  console.log(req.params); // url params can be found inside
+  console.log(req.body);
 
+  res.status(201).json({
+    status: 'Updated Successfully'
+  })
+});
+*/
+router.put('/:id', updateEmployee)
+
+// 5. Delete employee [TODO:]
 
 module.exports = router;

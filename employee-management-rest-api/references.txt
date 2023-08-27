@@ -1,0 +1,118 @@
+day 8:
+MongoDB in Windows
+--
+
+https://www.mongodb.com/try/download/enterprise
+
+Lest start MongoDB sever
+ C:\Program Files\MongoDB\Server\5.0\bin>.\mongod
+
+ Keep this cmd open
+
+ Launch MongoDB Client
+ C:\Program Files\MongoDB\Server\5.0\bin>.\mongo
+
+ press exit if all commands running fine
+
+ MongoDB 5.0 in Mac 
+--
+If have mongodb 5 installed in Mac.
+
+> brew services start mongodb-community@5.0
+> mongo
+> brew services stop mongodb-community@5.0
+
+MVC
+---
+Model View Controller
+Screen Shot image
+
+Validation (express-validator)
+--
+
+
+
+Database
+---
+ 1. DB Server
+    host/ ip address
+    port no.: 27017
+    db credentials (username and password):
+
+ 2. DB Client
+    Shell client (cmd)
+    GUI Client (Robo 3T, MongoDB compass)
+    Programming Client (Drivers)
+
+
+
+ DBA (not covered)
+
+ DB types
+ --
+    RDBMS
+    * ORACLE, MySQL, PostgreSQL, MariaDB
+    * Relational databases
+    * Saved in columns and Rows
+    * interact using SQL 
+    * Schema based
+
+
+    NoSQL 
+    --
+    * MongoDB,  Amazon DynamoDB, Apache Ignite
+    * Not only SQL 
+    * Saved as Collections (Object (JSON))
+    * interact using JavaScript
+    * Schema-less 
+    * meant for unstructured data
+
+
+
+MongoDB
+---
+commands -
+
+    db
+    show dbs
+(ctr + l to clear)
+    use employeesDB
+    db
+    db.createCollection('employees')
+    show dbs
+    show collections
+    db.employees.insert({name:'John', phone: 324333, email: 'j@k.com'})
+    db.employees.insert({
+    ... name: 'steve',
+    ... phone: 23243453,
+    ... email: 's@k.com',
+    ... age: 20,
+    ... exp: 0,
+    ... city: 'Sydney'
+    ... })
+TODO: Add multiple values
+    db.employees.find()
+    db.employees.find().pretty()
+    db.employees.find({name: 'steve'})
+    db.employees.findOne({name: 'steve'})
+    db.employees.find({ "_id" : ObjectId("64eb51eded4ae3b1a8ec4faa")})
+     db.employees.update({ "name" : "John"},
+     ... { $set: { exp: 10 } } )
+    db.employees.find()
+    db.employees.update({ "company" : "CTS"}, { $set: { "name": "Nadeem", "phone": 24324234, "email": "n@k.com" } } )
+    db.employees.save({"name": "Nadeem"}) // Same as insert
+    db.employees.remove({ "_id" : ObjectId("64eb594ced4ae3b1a8ec4fab")})
+    exit
+
+
+
+
+Drivers of MongoDB
+    1. Official MongoDB Driver (NPMJS)
+    2. Unoffocial MongoDB Driver (Mongoose)
+
+
+Mongoose ORM Tool
+====
+    * Offers Object modelling (Schema)
+    * Driver
