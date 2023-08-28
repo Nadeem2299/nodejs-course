@@ -27,8 +27,10 @@ MVC
 Model View Controller
 Screen Shot image
 
+class 9
 Validation (express-validator)
 --
+express.js middleware for validator.
 
 
 

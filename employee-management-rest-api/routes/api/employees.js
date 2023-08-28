@@ -1,15 +1,17 @@
 var express = require("express");
 const { createEmployee, getEmployees, getEmployeeById, updateEmployee } = require('../../controllers/employees.controller')
 
+const { body } = require('express-validator');
+
 var router = express.Router();
 
-// CRUD App
-
-// 1. create employees - POST
-// 2. listing employee - /api/employees - GET
-// 3. Get Emplyee details by ID - GET
-// 4. Update employee -PUT/PATCH
-// 5. Delete employee [TODO:]
+/* CRUD App
+ 1. create employees - POST
+ 2. listing employee - /api/employees - GET
+ 3. Get Emplyee details by ID - GET
+ 4. Update employee -PUT/PATCH
+ 5. Delete employee [TODO:]
+*/
 
 /* POST method employee create. /api/employees*/
 /*
@@ -21,7 +23,10 @@ router.post('/', function (req, res, next) {
   });
 })
 */
-router.post('/', createEmployee)
+router.post('/', 
+ body('name').isLength({min: 2}),
+ body('email', 'Invalid email format').isEmail(),
+createEmployee)
 
 /* GET employees listing. /api/employees*/
 /*
@@ -60,7 +65,7 @@ router.get('/:empId', (req, res, next) => {
   });
 })
 */
-router.get('/:empId', getEmployeeById)
+router.get('/:id', getEmployeeById)
 
 // Update employee -PUT/PATCH
 /*

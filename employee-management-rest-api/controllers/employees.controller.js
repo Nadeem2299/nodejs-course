@@ -1,4 +1,5 @@
 // establish the connection with mongodb
+const { validationResult } = require('express-validator');
 const Employee = require("../models/employees.model");
 
 exports.getEmployees = (req, res) => {
@@ -27,6 +28,13 @@ exports.createEmployee = (req, res) => {
   // 3. insert the above data into collection
   // 4. get the confirmation from db and send that back as res
   
+  // do the validation
+
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
   // creating DAO
   const employeeDao = new Employee(req.body);
   // saving to create a new document 
