@@ -119,3 +119,36 @@ Mongoose - Object Modeling package
     * Offers Object modelling (Schema)
     * Object Document Mapping (DOM)
     * Driver
+
+
+day 10
+
+Authentication
+--
+* Authentication is a process that allows the user to prove their identity and access resources on your system.
+    types 
+    1. session bases Authentication
+        * session id generated and saved in server
+        * session id would be sent to the browser
+        * browser should store it in cookies
+         (post-login pages will be accessible thereafter
+         provided the session id is sent throu the req header)
+
+
+    2. token bassed Authentication
+        * token (JWT) generated
+        * token would be sent to the browser
+        * browser should store it in cookies / local storage / session storage
+           (post-login pages will be accessible thereafter
+            provided the ton id is sent throu the req header)        
+
+
+for sign up easily done in Files
+for login
+instal packages
+1. npm i passport passport-local
+2. npm i express-jwt    
+3. npm i jsonwebtoken
+
+
+MySQL using sequalize
